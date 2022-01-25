@@ -1,0 +1,23 @@
+{
+  "name": "utility-functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toptaskalender/utility-functions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toptaskalender/utility-functions/issues"
+  },
+  "homepage": "https://github.com/toptaskalender/utility-functions#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
