@@ -1,16 +1,16 @@
 // Challenge 1
 function addTwo(num) {
-	return num + 2;
+  return num + 2;
 }
 
 // Challenge 2
 function addS(word) {
-	return word + 's';
+  return word + 's';
 }
 
 // Challenge 3
 function map(array, callback) {
-	const newArray = [];
+  const newArray = [];
   
   for (let i = 0; i < array.length; i++) {
     const result = callback(array[i], i, array);
@@ -22,7 +22,7 @@ function map(array, callback) {
 
 // Challenge 4
 function forEach(array, callback) {
-	for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     callback(array[i], i, array);
   }
 }
@@ -31,7 +31,7 @@ function forEach(array, callback) {
 function mapWith(array, callback) {
   const newArray = [];
   
-	forEach(array, (el, i, arr) => {
+  forEach(array, (el, i, arr) => {
     const newElement = callback(el, i, arr);
     newArray.push(newElement);
   })
