@@ -41,7 +41,6 @@ function mapWith(array, callback) {
 
 // Challenge 6
 function reduce(array, callback, initialValue) {
-  // In progress, right now is only working with initialValues that are numbers.
   if (initialValue == undefined) {
     let prev = array[0];
 
@@ -59,4 +58,16 @@ function reduce(array, callback, initialValue) {
 
     return prev;
   }
+}
+
+// Challenge 7
+function intersection(arrays) {
+  const intersectionArray = reduce(arrays, function reduceToIntersectionArray(prev, curr) {
+    return prev.filter(function selectCommonElements(el) {
+      const hasSameElement = curr.includes(el);
+      if (hasSameElement) return true;
+    });
+  });
+  
+  return intersectionArray;
 }
