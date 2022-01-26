@@ -10,6 +10,7 @@ This repository was created to imitate the [lodash](https://www.npmjs.com/packag
 4. Create the function `forEach`.
 5. Create the function `mapWith` that is the same as `map`, but this time use the `forEach` method inside of the `mapWith` function.
 6. Create the function `reduce`.
+6. Create the function `intersection`.
 
 ## Notes
 
