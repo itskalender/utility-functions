@@ -10,8 +10,9 @@ This repository was created to imitate the [lodash](https://www.npmjs.com/packag
 4. Create the function `forEach`.
 5. Create the function `mapWith` that is the same as `map`, but this time use the `forEach` method inside of the `mapWith` function.
 6. Create the function `reduce`.
-6. Create the function `intersection`.
+7. Create the function `intersection`.
+8. Create the function `union` that takes in an array of arrays, compares the inner arrays, and returns a new array that contains all elements. If there are duplicate elements, only add it once to the new array. Preserve the order of the elements starting from the first element of the first array.
 
 ## Notes
 
-- The challenges are taken from Will Sentance's [course](https://frontendmasters.com/courses/javascript-hard-parts-v2/) on FrontendMasters. 
+- The challenges are taken from Will Sentance's [course](https://frontendmasters.com/courses/javascript-hard-parts-v2/) on FrontendMasters.

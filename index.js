@@ -11,12 +11,12 @@ function addS(word) {
 // Challenge 3
 function map(array, callback) {
   const newArray = [];
-  
+
   for (let i = 0; i < array.length; i++) {
     const result = callback(array[i], i, array);
     newArray.push(result);
   }
-  
+
   return newArray;
 }
 
@@ -30,12 +30,12 @@ function forEach(array, callback) {
 // Challenge 5
 function mapWith(array, callback) {
   const newArray = [];
-  
+
   forEach(array, (el, i, arr) => {
     const newElement = callback(el, i, arr);
     newArray.push(newElement);
-  })
-  
+  });
+
   return newArray;
 }
 
@@ -62,12 +62,33 @@ function reduce(array, callback, initialValue) {
 
 // Challenge 7
 function intersection(arrays) {
-  const intersectionArray = reduce(arrays, function reduceToIntersectionArray(prev, curr) {
-    return prev.filter(function selectCommonElements(el) {
-      const hasSameElement = curr.includes(el);
-      if (hasSameElement) return true;
-    });
-  });
-  
+  const intersectionArray = reduce(
+    arrays,
+    function reduceToIntersectionArray(prev, curr) {
+      return prev.filter(function selectCommonElements(el) {
+        const hasSameElement = curr.includes(el);
+        if (hasSameElement) return true;
+      });
+    }
+  );
+
   return intersectionArray;
+}
+
+// Challenge 8
+function union(arrays) {
+  const unionArray = reduce(
+    arrays,
+    function reduceToUniqueUnionArray(prev, curr) {
+      curr.forEach(function selectUniqueElements(el) {
+        if (!prev.includes(el)) {
+          prev.push(el);
+        }
+      });
+      return prev;
+    },
+    []
+  );
+
+  return unionArray;
 }
